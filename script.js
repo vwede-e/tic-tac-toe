@@ -20,10 +20,12 @@ gridContainer.addEventListener("click", upDate);
 function upDate(event) {
     if (event.target != this) {
         const dataValue = +(event.target.getAttribute("data-value"));
-        event.target.textContent = lastPlayed;
-        gameBoard[dataValue-1] = lastPlayed;
-        gameBoardCounter += 1;
-        checkWin(dataValue);
+        if (!event.target.textContent) {
+            event.target.textContent = lastPlayed;
+            gameBoard[dataValue-1] = lastPlayed;
+            gameBoardCounter += 1;
+            checkWin(dataValue);
+        }
     }
 }
 
