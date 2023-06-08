@@ -11,10 +11,17 @@
 
 body {
     min-height: 100%;
+    background-color: #ededed;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+}
+
+main {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #ededed;
 }
 
 .grid-container {
@@ -73,4 +80,16 @@ aside > div {
 
 .close:hover {
     color: #fff;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    gap: 15px;
+    align-items: center;
+}
+
+select {
+    font-size: 1rem;
 }
